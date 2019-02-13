@@ -1,21 +1,26 @@
 import matplotlib.pyplot as plt
-import math
 import getInput as gi
+from itertools import cycle
+import math
 
+colors = "bgrcmykw"
+color_index = 0
 gi.getNumFn()
 
 gi.getFn()
 
 gi.getUpper()
-pntToPlot = []
-numTested = []
+
 
 for i in range(int(gi.numFN)):
-    for j in range (int(gi.upper)):
-        pntToPlot.append(eval(gi.fns[i]))
+    pntToPlot = []
+    numTested = []
+    for j in range (1,int(gi.upper)):
+        pntToPlot.append(((eval(gi.fns[i]))))
         numTested.append(j)
+    plt.plot(numTested, pntToPlot, linewidth = 2, c=colors[color_index])
+    color_index +=1
 
-    plt.plot(numTested, pntToPlot, c='red')
     plt.xlabel('N')
     plt.ylabel('Operations')
     plt.title('Rate of Growth')

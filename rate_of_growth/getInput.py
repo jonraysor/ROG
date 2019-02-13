@@ -1,5 +1,3 @@
-from funcGiven import Fn as fg
-
 numFN = 0
 fns = []
 upper = 0
